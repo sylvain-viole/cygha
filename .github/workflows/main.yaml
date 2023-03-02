@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-      uses: actions/checkout@v3.3.0
-      - npm install
-      run: 
-        - npm install http-server -g
-        - npm install
+        uses: actions/checkout@v3.3.0
+      - name: install http-server
+        run: npm install http-server -g
+      - name: npm install
+        run: npm install
       - name: deploy
-      run: http-server
+        run: http-server
       - name: test
-      run: npm run test
+        run: npm run test
 
