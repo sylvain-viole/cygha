@@ -8,12 +8,20 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3.3.0
-      - name: install http-server
-        run: npm install http-server -g
-      - name: npm install
-        run: npm install
       - name: deploy
-        run: http-server
+        uses: JamesIves/github-pages-deploy-action@v4
+        with: 
+          folder: src
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3.3.0
+      - name: install
+        run: npm install
       - name: test
         run: npm run test
+
 
