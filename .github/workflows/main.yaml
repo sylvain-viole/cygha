@@ -16,7 +16,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: src
+          folder: build
 
   test:
     runs-on: ubuntu-latest
