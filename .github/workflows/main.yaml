@@ -50,7 +50,7 @@ jobs:
       - name: install
         run: npm install
       - name: test
-        run: npm run test
+        run: npm run test:ci
       - name: upload artifacts
         if: always()
         uses: actions/upload-artifact@v3
