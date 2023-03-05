@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test:ci": "cypress run --browser chrome --config baseUrl=https://sylvain-viole.github.io/cygha/",
-    "test:local": "cypress run --browser chrome --config baseUrl=http://127.0.0.1:8080"
+    "cy:cy:run": "cypress run --browser chrome --config baseUrl=https://sylvain-viole.github.io/cygha/",
+    "cy:local:run": "cypress run --browser chrome --config baseUrl=http://127.0.0.1:8082",
+    "cy:local:open": "cypress open --e2e --browser chrome --config baseUrl=http://127.0.0.1:8082"
   },
   "repository": {
     "type": "git",
